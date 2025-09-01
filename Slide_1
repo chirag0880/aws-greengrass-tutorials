@@ -1,0 +1,75 @@
+What is AWS Greengrass?
+Core Concept:
+AWS Greengrass is software that extends AWS cloud capabilities to local devices. This allows devices to collect and analyze data closer to its source (at the "edge") while still being able to securely communicate with each other on local networks and with the AWS Cloud.
+
+Key Functionality:
+Developers can use AWS Greengrass to author AWS Lambda functions in the cloud and then conveniently deploy them to local devices for execution. This enables:
+
+Local Application Execution: Applications run on devices even with intermittent cloud connectivity.
+
+Local Communication: Devices can securely exchange messages with each other on the local network without needing an internet connection.
+
+Resilient Messaging: Greengrass includes a local publish/subscribe message manager that intelligently buffers messages if the cloud connection is lost, preserving them until connectivity is restored.
+
+Security:
+AWS Greengrass protects user data through:
+
+Secure authentication and authorization of devices.
+
+Secure connectivity on the local network and to the cloud.
+
+Devices retain their security credentials and can communicate locally even if the cloud connection is disrupted.
+
+Secure over-the-air (OTA) software updates.
+
+Key Components & Features:
+The AWS Greengrass ecosystem consists of:
+
+Greengrass Core Software: The software installed on a local device that turns it into a Greengrass Core.
+
+Greengrass Core SDK: Allows Lambda functions to interact with the core.
+
+Cloud Services: The AWS management APIs and console for configuring Greengrass.
+
+Key features include:
+
+Lambda runtime (for executing functions)
+
+Device Shadows (for syncing device state)
+
+Message Manager
+
+Group Management
+
+Discovery Service
+
+Over-the-air (OTA) Update Agent
+
+Local Resource Access
+
+Machine Learning Interface
+
+Greengrass Core Software:
+This software provides the core functionalities on the device, including:
+
+Deploying and executing Lambda functions.
+
+Enabling local messaging between devices using MQTT.
+
+Managing secure connections to the cloud.
+
+Handling OTA software updates.
+It comprises a Message Manager, Lambda runtime, Device Shadows service, and a Deployment agent.
+
+Version Note:
+The lecture mentions DGC (Greengrass Core) Version 1.5 and its improvements, which include:
+
+Support for machine learning inference.
+
+Lambda functions supporting binary data as input payload.
+
+Reduced memory footprint.
+
+Performance and stability improvements.
+
+Instructions for migrating from a previous version (1.0) involve copying certificates and running specific deployment commands.
